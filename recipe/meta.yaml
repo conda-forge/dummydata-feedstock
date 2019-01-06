@@ -12,19 +12,18 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: True  # [win]
-  skip: True  # [py>27]
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1000
+  skip: True  # [win or py3k]
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
   run:
     - python
-    - numpy x.x
-    - netcdf4
+    - numpy
+    - netcdf4 <1.4
     - python-dateutil
 
 test:
@@ -37,7 +36,6 @@ about:
   license_family: Apache
   license_file: LICENSE
   summary: 'Dummy data generator producting netCDF files'
-
   description: Dummy data generator
   doc_url: http://dummydata.readthedocs.io/
   dev_url: https://github.com/pygeo/dummydata
