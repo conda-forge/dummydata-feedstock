@@ -5,9 +5,13 @@ Home: https://github.com/pygeo/dummydata
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dummydata-feedstock/blob/master/LICENSE.txt)
 
 Summary: Dummy data generator producting netCDF files
+
+Development: https://github.com/pygeo/dummydata
+
+Documentation: http://dummydata.readthedocs.io/
 
 Dummy data generator
 
